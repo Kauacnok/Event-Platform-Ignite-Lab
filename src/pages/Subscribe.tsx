@@ -65,7 +65,7 @@ export function Subscribe() {
 				</div>
 			</div>
 
-			<img src="/src/assets/code-mockup.png" alt="" />
+			<img src="https://raw.githubusercontent.com/Kauacnok/Event-Platform-Ignite-Lab/main/src/assets/code-mockup.png" alt="example layout of website" />
 		</div>
 	)
 }
