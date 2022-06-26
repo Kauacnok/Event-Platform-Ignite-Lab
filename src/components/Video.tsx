@@ -2,6 +2,8 @@ import { Player, Youtube, DefaultUi } from '@vime/react'
 import { DiscordLogo, Lightning, FileArrowDown, CaretRight } from 'phosphor-react'
 import { useGetLessonBySlugQuery } from '../graphql/generated'
 
+import { Cards } from './Cards'
+
 import '@vime/core/themes/default.css'
 
 interface VideoProps {
@@ -73,34 +75,8 @@ export function Video(props: VideoProps) {
 				</div>
 
 				<div className="gap-8 mt-20 grid grid-cols-2">
-					<a href="#" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors">
-						<div className="bg-green-700 h-full p-6 flex items-center">
-							<FileArrowDown size={40}/>
-						</div>
-						<div className="py-6 leading-relaxed">
-							<strong className="text-2xl ">Material complementar</strong>
-							<p className="text-sm text-gray-200 mt-2">
-								Acesse o material complementar para acelerar seu desenvolvimento
-							</p>
-						</div>
-						<div className="h-full p-6 flex items-center">
-							<CaretRight size={24} />
-						</div>
-					</a>
-					<a href="#" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors">
-						<div className="bg-green-700 h-full p-6 flex items-center">
-							<FileArrowDown size={40}/>
-						</div>
-						<div className="py-6 leading-relaxed">
-							<strong className="text-2xl ">Wallpapers</strong>
-							<p className="text-sm text-gray-200 mt-2">
-								Baixe os wallpapers exclusivos do Ignite
-							</p>
-						</div>
-						<div className="h-full p-6 flex items-center">
-							<CaretRight size={24} />
-						</div>
-					</a>
+					<Cards title="Material Complementar" content="Acesse o material complementar para acelerar seu desenvolvimento" type="ComplementaryMaterial" link="#" />
+					<Cards title="Wallpapers" content="Baixe os wallpapers exclusivos do Ignite" type="Wallpaper" link="#" />
 				</div>
 			</div>
 		</div>
