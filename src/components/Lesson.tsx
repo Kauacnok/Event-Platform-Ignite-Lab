@@ -23,14 +23,17 @@ export function Lesson(props: LessonProps) {
 	const isActiveLesson = slug === props.slug
 
 	return (
-		<Link to={`/event/lesson/${props.slug}`} className="group">
+		<Link to={ isLessonAvailable ? `/event/lesson/${props.slug}` : '/event/'} className={classNames("group", {
+			'cursor-not-allowed': !isLessonAvailable
+		})} >
 			<span className="text-gray-300">
 				{availableAtDateFormatted}
 			</span>
 
 			<div 
-				className={classNames('rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500', {
-					'bg-green-500': isActiveLesson
+				className={classNames('rounded border border-gray-500 p-4 mt-2', {
+					'bg-green-500': isActiveLesson,
+					'group-hover:border-green-500': isLessonAvailable
 				})}
 			>
 				<header className="flex items-center justify-between">
