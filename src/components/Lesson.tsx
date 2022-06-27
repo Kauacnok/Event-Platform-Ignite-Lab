@@ -24,7 +24,7 @@ export function Lesson(props: LessonProps) {
 
 	return (
 		<Link to={ isLessonAvailable ? `/event/lesson/${props.slug}` : '/event/'} className={classNames("group", {
-			'cursor-not-allowed': !isLessonAvailable
+			'cursor-not-allowed opacity-50': !isLessonAvailable
 		})} >
 			<span className="text-gray-300">
 				{availableAtDateFormatted}
@@ -49,7 +49,7 @@ export function Lesson(props: LessonProps) {
 							</span>
 						) : (
 							
-							<span className="text-sm text-orange-500 font-medium flex items-center gap-2">
+							<span className="text-sm text-orange-500 font-medium flex items-center gap-2 opacity-50">
 								<Lock size={20} />
 								Em breve
 							</span>
