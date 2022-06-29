@@ -26,7 +26,7 @@ export function Subscribe() {
 
 	return (
 		<div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
-			<div className="w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto">
+			<div className="w-full max-w-[1100px] flex flex-col gap-10 text-center items-center justify-between mt-10 mx-auto md:flex-row md:text-left md:gap-0 md:mt-20">
 				<div className="max-w-[640px] ">
 					<Logo />
 
@@ -38,7 +38,7 @@ export function Subscribe() {
 					</p>
 				</div>
 
-				<div className="p-8 bg-gray-700 border border-gray-500 rounded">
+				<div className="p-8 w-[100%] bg-gray-700 border-y border-gray-500 md:w-auto md:border md:rounded">
 					<strong className="text-2xl mb-6 block">Increva-se gratuitamente</strong>
 					<form onSubmit={handleSubscribe} className="flex flex-col gap-2 w-full">
 						<input 
@@ -65,7 +65,7 @@ export function Subscribe() {
 				</div>
 			</div>
 
-			<img src="https://raw.githubusercontent.com/Kauacnok/Event-Platform-Ignite-Lab/main/src/assets/code-mockup.png" alt="example layout of website" />
+			<img src="https://raw.githubusercontent.com/Kauacnok/Event-Platform-Ignite-Lab/main/src/assets/code-mockup.png" alt="example layout of website" className="mb-4 md:mb-0" />
 		</div>
 	)
 }
