@@ -28,7 +28,7 @@ export function Subscribe() {
 		<div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
 			<div className="w-full max-w-[1100px] flex flex-col gap-10 text-center items-center justify-between mt-10 mx-auto md:flex-row md:text-left md:gap-0 md:mt-20">
 				<div className="max-w-[640px] ">
-					<Logo setStyleOnLogo={false} />
+					<Logo setStyleOnLogo={true} />
 
 					<h1 className="mt-8 text-[2.5rem] leading-tight">
 						Construa uma <strong className="text-blue-500">aplicação</strong> do zero, com <strong className="text-blue-500">React JS</strong>
