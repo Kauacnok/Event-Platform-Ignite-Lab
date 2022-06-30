@@ -1,9 +1,13 @@
 import React from "react";
 
-export function Logo() {
+interface propsLogo {
+  setStyleOnLogo: boolean
+}
+
+export function Logo(props: propsLogo) {
   return (
     <svg
-      className="mx-auto md:mx-0"
+      className= {props.setStyleOnLogo ? "mx-auto md:mx-0" : "" } 
       xmlns="http://www.w3.org/2000/svg"
       width="237"
       height="34"
