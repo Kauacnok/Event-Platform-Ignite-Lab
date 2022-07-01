@@ -18,8 +18,8 @@ export function Header({isMenuOpen, setIsMenuOpen}: propsHeader) {
 				<Logo setStyleOnLogo={false} />
 			</div>
 			
-			<p className="block pl-8 md:hidden">Aulas</p>
-			<div onClick={toggleMenu} className="block p-2 mr-5 rounded-full cursor-pointer hover:bg-gray-500 md:hidden md:mr-0 transition">
+			<div onClick={toggleMenu} className="flex flex-row items-center gap-2 p-2 mr-5 rounded-full cursor-pointer hover:bg-gray-500 md:hidden md:mr-0 transition">
+				<p className="block md:hidden">Aulas</p>
 				{ isMenuOpen ? <List size={40} color="#81D8F7"/> : <X size={40} color="#81D8F7" />}
 			</div>
 		</header>

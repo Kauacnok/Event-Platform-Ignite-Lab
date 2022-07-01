@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from 'classnames'
 
 interface propsLogo {
   setStyleOnLogo: boolean
@@ -7,7 +8,9 @@ interface propsLogo {
 export function Logo(props: propsLogo) {
   return (
     <svg
-      className= {props.setStyleOnLogo ? "mx-auto md:mx-0" : "" } 
+      className= {classNames("w-[80%]", {
+        "mx-auto md:mx-0": props.setStyleOnLogo
+      })} 
       xmlns="http://www.w3.org/2000/svg"
       width="237"
       height="34"
