@@ -1,19 +1,21 @@
 import { Player, Youtube, DefaultUi } from '@vime/react'
 import { DiscordLogo, Lightning, FileArrowDown, CaretRight } from 'phosphor-react'
 import { useGetLessonBySlugQuery } from '../graphql/generated'
+import classNames from 'classnames'
 
 import { Cards } from './Cards'
 
 import '@vime/core/themes/default.css'
 
 interface VideoProps {
-	lessonSlug: string
+	lessonSlug: string,
+	isMenuOpen: boolean
 }
 
-export function Video(props: VideoProps) {
+export function Video({lessonSlug, isMenuOpen}: VideoProps) {
 	const { data } = useGetLessonBySlugQuery({ 
 		variables: {
-			slug: props.lessonSlug
+			slug: lessonSlug
 		}
 	})
 
@@ -26,7 +28,10 @@ export function Video(props: VideoProps) {
 	}
 
 	return (
-		<div className="flex-1">
+		<div className={classNames("flex-1", {
+			'block': isMenuOpen,
+			'hidden': !isMenuOpen
+		})}>
 			<div className="bg-black flex justify-center">
 				<div className="h-full w-full max-w-[1180px] max-h-[60vh] aspect-video">
 					<Player>
@@ -37,7 +42,7 @@ export function Video(props: VideoProps) {
 			</div>
 
 			<div className="p-8 max-w-[1100px] mx-auto">
-				<div className="flex items-start gap-16">
+				<div className="flex items-start flex-col gap-16 md:flex-row">
 					<div className="flex-1">
 						<h1 className="text-2xl font-bold">
 							{data.lesson.title}
@@ -62,19 +67,19 @@ export function Video(props: VideoProps) {
 						)}
 					</div>
 
-					<div className="flex flex-col gap-4">
-						<a href="#" className="p-4 text-sm bg-green-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-green-700 transition-colors">
+					<div className="flex flex-col mx-auto gap-4 md:flex-row md:mx-0">
+						<a href="#" className="p-4 text-sm w-[360px] bg-green-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-green-700 transition-colors md:w-auto ">
 							<DiscordLogo size={24}/>
 							Comunidade do Discord
 						</a>
-						<a href="#" className="p-4 text-sm border border-blue-500 text-blue-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-blue-500 hover:text-gray-900 transition-colors">
+						<a href="#" className="p-4 text-sm w-[360px] border border-blue-500 text-blue-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-blue-500 hover:text-gray-900 transition-colors md:w-auto">
 							<Lightning size={24}/>
 							Acesse o desafio
 						</a>
 					</div>
 				</div>
 
-				<div className="gap-8 mt-20 grid grid-cols-2">
+				<div className="gap-8 mt-20 grid grid-cols-1 md:grid-cols-2">
 					<Cards title="Material Complementar" content="Acesse o material complementar para acelerar seu desenvolvimento" type="ComplementaryMaterial" link="#" />
 					<Cards title="Wallpapers" content="Baixe os wallpapers exclusivos do Ignite" type="Wallpaper" link="#" />
 				</div>
