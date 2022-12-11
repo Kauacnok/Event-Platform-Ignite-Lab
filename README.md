@@ -2,7 +2,7 @@
 	<h1 align='center'>Event Plataform</h1>
 </p>
 <p align='center'> 
-	<img src="https://raw.githubusercontent.com/migueloliveiraz/event-platform/main/.github/background.png" alt="Imagem com o layout do site quando o usuário está na aba de aulas">
+	<img src="https://i.imgur.com/ozqswIW.png" alt="Imagem com o layout do site quando o usuário está na aba de aulas">
 </p>
 
 ## 🧪 Tecnologias
