@@ -47,7 +47,7 @@ export function Video({lessonSlug, isMenuOpen}: VideoProps) {
 						<h1 className="text-2xl font-bold">
 							{data.lesson.title}
 						</h1>
-						<p className="mt-4 text-gray-200 leading-relaxed">
+						<p className="mt-4 text-black-100 dark:text-gray-200 leading-relaxed">
 							{data.lesson.description}
 						</p>
 
@@ -61,18 +61,18 @@ export function Video({lessonSlug, isMenuOpen}: VideoProps) {
 
 								<div className="leading-relaxed">
 									<strong className="font-bold text-2xl block">{data.lesson.teacher.name}</strong>
-									<span className="text-gray-200 text-sm block">{data.lesson.teacher.bio}</span>
+									<span className="text-black-100 dark:text-gray-200 text-sm block">{data.lesson.teacher.bio}</span>
 								</div>
 						</div>
 						)}
 					</div>
 
 					<div className="flex flex-col mx-auto gap-4 md:flex-row md:mx-0">
-						<a href="#" className="p-4 text-sm bg-green-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-green-700 transition-colors md:w-auto ">
+						<a href="#" className="p-4 text-sm text-white-100 bg-green-300 dark:bg-green-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-green-500 hover:dark:bg-green-700 transition-colors md:w-auto ">
 							<DiscordLogo size={24}/>
 							Comunidade do Discord
 						</a>
-						<a href="#" className="p-4 text-sm border border-blue-500 text-blue-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-blue-500 hover:text-gray-900 transition-colors md:w-auto">
+						<a href="#" className="p-4 text-sm bg-blue-500 dark:bg-transparent text-gray-900 dark:text-blue-500 border border-blue-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-blue-600 hover:dark:bg-blue-500 hover:text-gray-900 transition-colors md:w-auto">
 							<Lightning size={24}/>
 							Acesse o desafio
 						</a>

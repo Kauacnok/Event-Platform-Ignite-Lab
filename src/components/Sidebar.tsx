@@ -10,7 +10,7 @@ export function Sidebar({ isMenuOpen }: propsSidebar) {
 	const { data } = useGetLessonsQuery()
 
 	return (
-		<aside className={classNames("w-[348px] bg-gray-700 p-6 border-l border-gray-600 md:block", {
+		<aside className={classNames("w-[348px] bg-gray-100 border dark:bg-gray-700 p-6 border-l dark:border-gray-600 md:block", {
 			'hidden md:block': isMenuOpen,
 			'block absolute w-[100%] md:relative md:w-auto md:h-auto': !isMenuOpen
 		})}>

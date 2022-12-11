@@ -10,8 +10,8 @@ interface CardsProps {
 export function Cards(props: CardsProps) {
 
 	return (
-		<a href={props.link} className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors">
-			<div className="bg-green-700 h-full p-6 flex items-center">
+		<a href={props.link} className="bg-gray-300 dark:bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:dark:bg-gray-600 transition-colors">
+			<div className="bg-green-300 dark:bg-green-700 h-full p-6 flex items-center">
 				{props.type === 'ComplementaryMaterial' ? <FileArrowDown size={40} /> : <ImageSquare size={40} />}
 			</div>
 			<div className="py-6 leading-relaxed">

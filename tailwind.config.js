@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   content: [
 	'./src/**/*.tsx'
@@ -34,7 +36,17 @@ module.exports = {
 			    600: '#29292E',
 			    700: '#121214',
 			    900: '#09090A'
-			}
+			},
+			white: {
+				100: "#ccc"
+			},
+			black: {
+				100: "#161616"
+			},
+			transparent: 'transparent',
+      		current: 'currentColor',
+      		indigo: colors.indigo,
+      		yellow: colors.amber,
     	}
     },
   },
