@@ -47,6 +47,15 @@ module.exports = {
       		current: 'currentColor',
       		indigo: colors.indigo,
       		yellow: colors.amber,
+    	},
+    	keyframes: {
+    		transitionRight: {
+    			'from': { transform: 'translateX(200%)' },
+    			'to': { transform: 'translateX(0%)' },
+    		}
+    	},
+    	animation: {
+    		'transitionContentToRight': 'transitionRight 1s ease-in-out'
     	}
     },
   },

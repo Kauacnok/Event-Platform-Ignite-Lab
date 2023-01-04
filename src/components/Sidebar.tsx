@@ -11,8 +11,8 @@ export function Sidebar({ isMenuOpen }: propsSidebar) {
 
 	return (
 		<aside className={classNames("w-[348px] bg-gray-100 border dark:bg-gray-700 p-6 border-l dark:border-gray-600 md:block", {
-			'hidden md:block': isMenuOpen,
-			'block absolute w-[100%] md:relative md:w-auto md:h-auto': !isMenuOpen
+			'hidden md:block animate-transitionContentToRight': isMenuOpen,
+			'block absolute w-[100%] md:relative md:w-auto md:h-auto animate-transitionContentToRight': !isMenuOpen
 		})}>
 
 			<span className="font-bold text-2xl pb-6 mb-6 border-b border-gray-500 block">
