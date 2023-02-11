@@ -6,6 +6,7 @@ import classNames from 'classnames'
 import { Cards } from './Cards'
 
 import '@vime/core/themes/default.css'
+import { Loading } from '../components/Loading'
 
 interface VideoProps {
 	lessonSlug: string,
@@ -21,9 +22,7 @@ export function Video({lessonSlug, isMenuOpen}: VideoProps) {
 
 	if (!data || !data.lesson) {
 		return (
-			<div className="flex-1">
-				<p>Carregando...</p>
-			</div>
+			<Loading />
 		)
 	}
 
